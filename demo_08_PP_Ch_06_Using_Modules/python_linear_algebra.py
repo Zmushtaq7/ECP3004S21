@@ -48,7 +48,8 @@ import matplotlib.pyplot as plt
 # Find out the current directory.
 os.getcwd()
 # Change to a new directory.
-os.chdir('C:\\Users\\le279259\\Documents\\Teaching\\ECP3004_Spring_2021\\GitRepo\\ECP3004S21\\demo_08_PP_Ch_06_Using_Modules')
+# os.chdir('C:\\Users\\le279259\\Documents\\Teaching\\ECP3004_Spring_2021\\GitRepo\\ECP3004S21\\demo_08_PP_Ch_06_Using_Modules')
+os.chdir('C:\\Users\\le279259\\OneDrive - University of Central Florida\\Documents\\GitHub\\ECP3004S21\\demo_08_PP_Ch_06_Using_Modules')
 # Check that the change was successful.
 os.getcwd()
 
@@ -58,14 +59,82 @@ os.getcwd()
 # Examples Using Numpy.
 ##################################################
 
+# Some languages are designed for matrix algebra. 
+# For example, when you use the statistical programming language ```R```,
+# the matrix multiplication operator is the symbol ```%*%```. 
+
+# Python operates vectors and matrices differently. 
+# It thinks of them as parameters in a function, 
+# such as the dot function in the numpy module. 
+
+# Assign numbers to two numpy arrays.
+A = np.array([[1., 2., 3.], [4., 5., 6.]])
+x = np.array([[10., 11.], [20., 21.], [30., 31.]])
+
+# Multiply these matrices together. 
+b = A.dot(x)
+print(b)
+
+# These numpy arrays have their own type. 
+type(A)
+
+type(x)
+
+type(b)
+
+
+# To extract values from the array, you can extract elements
+# just as you would for a list.
+
+A[1]
+
+A[1][2]
+
+# Since these numpy arrays are 2-dimensional objects,
+# you can also extract the elements by passing a 
+# list of index numbers. 
+A[1, 2]
+
+# Now that we know how to perform matrix multiplication, 
+# we can use it to solve for the unknown vector or matrix 
+# x that produced the product b.
+
 
 #--------------------------------------------------
-# Solve a linear system
+# Solve a linear system with the inverse matrix
 #--------------------------------------------------
+
+# The conceptually simple--but computationally expensive--approach 
+# is to calculate the inverse of the matrix ```A``` 
+# and then multiply ```b``` to achieve the solution ```b```. 
+
 
 # Assign numbers to two numpy arrays.
 A = np.array([[1., 2.], [3., 4.]])
 b = np.array([1., 1.])
+
+
+# Use the np.linalg.inv method to find the inverse.
+A_inv = np.linalg.inv(A)
+A_inv
+
+# Verify that A_inv is the inverse of A.
+A.dot(A_inv)
+
+A_inv.dot(A)
+
+# Since both of these products equal the identity matrix, 
+# A_inv is the inverse of A. 
+
+# Notice that the off-diagonal elements are not exactly zero.
+# Rounding errors occur when using numbers with finite precision. 
+
+
+#--------------------------------------------------
+# Solve a linear system without the inverse
+#--------------------------------------------------
+
+
 
 # Use the solve method to find a solution x to the system
 # of the form A*x = b
@@ -251,7 +320,8 @@ plt.xlabel('$x_i$')
 plt.title('Estimating a Nonlinear Model with linalg.lstsq')
 plt.show()
 
-
+# See the figure in the "Plots" tab in the 
+# upper right window of Anaconda.
 
 
 
