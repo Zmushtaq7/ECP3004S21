@@ -4,9 +4,9 @@
 #
 # ECP 3004: Python for Business Analytics
 #
-# Name: 
+# Name: Zaid Mushtaq
 #
-# Date:
+# Date: 2/24/21
 # 
 ##################################################
 #
@@ -39,7 +39,9 @@
 
 # import name_of_module
 
-
+import numpy as np
+import pandas as pd
+import doctest
 
 ##################################################
 # Function Definitions
