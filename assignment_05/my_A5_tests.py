@@ -4,9 +4,9 @@
 #
 # ECP 3004: Python for Business Analytics
 #
-# Name: 
+# Name: Zaid Mushtaq
 #
-# Date:
+# Date: 2/25/21
 # 
 ##################################################
 #
@@ -45,7 +45,7 @@ os.getcwd()
 ##################################################
 
 
-# Read the script my_A4_functions.py to run the tests. 
+# Read the script my_A5_functions.py to run the tests. 
 exec(open("my_A5_module.py").read())
 
 
