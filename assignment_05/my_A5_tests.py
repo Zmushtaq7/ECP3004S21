@@ -34,7 +34,7 @@ import doctest
 # Find out the current directory.
 os.getcwd()
 # Change to a new directory.
-os.chdir('C:\\Users\\user_name\\path\\to\\your\\repo\\assignment_04')
+os.chdir('/Users/zaidmushtaq/ECP3004S21/assignment_05')
 # Check that the change was successful.
 os.getcwd()
 
